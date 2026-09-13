@@ -1,0 +1,466 @@
+/* inner-pages.css */
+
+/* Resetting margin for body */
+
+/* Styles for the header */
+.header {
+  background-color: white;
+  color: black;
+  padding: 0;
+  border-bottom: 0px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin-left: 8px;
+}
+
+body {
+  margin: -10px; /* Adjust the margin as needed */
+ align: left;
+}
+	
+
+
+/* Styles for the left-aligned menu items */
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 20px; /* Adjust the left margin as needed for spacing */
+}
+
+.image-section{
+  display: block;
+  padding: 0;
+  margin: 0;
+  max-width: var(--image-max-width);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width as needed */
+  gap: 0px; /* Adjust the gap between grid items as needed */
+}
+
+.grid-item {
+  display: flex;
+  justify-content: left; /* Horizontally center content */
+  align-items: left; /* Vertically center content */
+  border: 0px solid #ccc; /* Optional: Add borders or styling to grid items */
+}
+
+.body-text {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-align: justify;
+  z-index: 2;
+}
+
+.title {
+  font-size: 32px;
+  color: black;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.body-text h1 {
+  font-size: 16px;
+  color: black;
+  text-align: left;
+}
+
+
+.body-text h2 {
+  font-size: 16px;
+  color: black;
+  text-align: left
+  font-weight: 400;
+}
+
+.script-text {
+  text-align:left;
+  margin-left: 200px;
+margin-right: 100px;
+  font-size: 12px;
+  text-align: justify
+	
+}
+
+}
+
+.audio {
+  align-content: center;
+}
+
+.left-img {	
+align-content: left
+}
+
+.nav li {
+  margin: 40;
+  margin-right: 40px; /* Adjust the right margin as needed for spacing */
+}
+
+.nav a {
+  text-decoration: underline;
+  color: #0000FF;
+}
+
+/* Style for the "Home" button on the right */
+.home-button {
+  margin-right: 30px; /* Adjust the right margin as needed for spacing */
+  text-decoration: underline;
+  color: #0000FF; /* Set the text color */
+}
+
+/* inner-pages.css */
+.contact-titlepix {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact-titlepix img {
+  max-width: 100%;
+  height: auto;
+}
+
+.audio-section {
+  width: 25%;
+  margin-left: 10px;
+}
+
+.contact-body-text {
+  width: 25%;
+  margin-left: 10px;
+}
+
+.contact-image-section {
+  display: flex;
+}
+
+.contact-image-section img {
+  max-height: 100%;
+  width: auto;
+}
+
+/* ========== CUSTOMIZABLE SETTINGS ========== */
+/* Change IMAGE_MAX_WIDTH to adjust the maximum width of all images and videos */
+:root {
+  --image-max-width: 200px;
+  /* Middle column separator width */
+  --separator-width: 50px;
+  /* Right margin for images */
+  --image-right-margin: 50px;
+}
+/* ========== END CUSTOMIZABLE SETTINGS ========== */
+
+/* Dotted line container - two column layout */
+.dotted-line {
+  display: grid;
+  grid-template-columns: 1fr var(--separator-width) 1fr;
+  gap: 0;
+  margin-left: 80px;
+  margin-right: 0;
+  align-items: start;
+  position: relative;
+}
+
+/* Arrow styling - positioned absolutely in the left margin */
+.arrow {
+  position: absolute;
+  font-size: 14px;
+  color: black;
+  left: -51px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* All body text goes to first column */
+.body-text {
+  grid-column: 1;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-align: justify;
+  z-index: 2;
+  position: relative;
+}
+
+.body-text p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+	font-size: 12px;
+}
+
+.body-text h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+ font-size: 15px;
+}
+
+.body-text h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* All images go to third column */
+.image-containerin {
+  grid-column: 3;
+  margin: 0;
+  padding: 0;
+  padding-right: var(--image-right-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+/* Content blocks should not be flex - let grid handle layout */
+.content-block {
+  display: contents;
+}
+
+.image-section {
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.image-section img {
+  display: block;
+  height: auto;
+}
+
+.video {
+  display: block;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
+  max-width: 100%;
+}
+
+.video img {
+  display: block;
+  height: auto;
+}
+
+/* Your existing styles for other elements */
+
+/* Styling for the background image layer */
+.background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* Styles for each background image */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-image1 {
+  background-image: url('image1.jpg');
+}
+
+.bg-image2 {
+  background-image: url('image2.jpg');
+}
+
+.bg-image3 {
+  background-image: url('image3.jpg');
+}
+
+/* CSS for desktop screens */
+@media (min-width: 768px) {
+    .desktop-quote {
+        display: block; /* Display blockquote on desktop */
+    }
+}
+
+/* CSS for mobile screens */
+@media (max-width: 767px) {
+    .desktop-quote {
+        display: none; /* Hide blockquote on mobile */
+    }
+}
+
+/* Add your existing styles for inner pages here */
+
+
+/* Add your existing styles for inner pages here */
+
+body {
+  position: relative; /* Add position relative to the body for positioning the line */
+  margin-top: 20px; /* Adjust the top margin to avoid touching the header */
+}
+
+/* Dotted line style */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0px; /* Start 20px from the top to avoid touching the header */
+  left: 30px; /* Adjust the left position as needed */
+  bottom: 0;
+  width: 1px;
+  background: black;
+ 
+}
+
+/* ========== MOBILE RESPONSIVE LAYOUT ========== */
+@media (max-width: 800px) {
+  /* Single column layout for mobile */
+  .dotted-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin-left: 40px;
+    margin-right: 20px;
+    align-items: start;
+  }
+
+  /* Title and keywords first */
+  .body-text {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    text-align: justify;
+    order: 1;
+    position: relative;
+  }
+
+  /* Images/videos after body text */
+  .image-containerin {
+    grid-column: 1;
+    grid-row: auto;
+    order: 2;
+    margin: 0;
+    padding: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .image-section {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .video {
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .video iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Keep arrow visible but make smaller */
+  .arrow {
+    position: absolute;
+    font-size: 11px;
+    color: black;
+    left: -26px;
+    top: -5px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .arrow p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav li {
+    margin-bottom: 8px;
+  }
+
+  .dropdown-content {
+    min-width: 90vw;
+    position: static;
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Keep dotted line but adjust position */
+  body::before {
+    left: 15px;
+    width: 1px;
+  }
+
+  .spacer {
+    height: 10px !important;
+  }
+
+  .body-text p {
+    font-size: 11px;
+  }
+
+  .body-text h1 {
+    font-size: 14px;
+  }
+}
+

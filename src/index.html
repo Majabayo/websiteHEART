@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  <title>majA Bay</title>
+  <style>
+    /* Home page specific nav override */
+    .nav li {
+      margin-left: 5px !important;
+    }
+
+    .home-content {
+      margin-top: 50px;
+      margin-left: 30px;
+    }
+    
+    .projects-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
+    
+    .projects-list li {
+      margin: 15px 0;
+    }
+    
+    .projects-list a {
+      text-decoration: underline;
+      color: #0000FF;
+      font-size: 14px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .projects-list a:hover {
+      background-color: black;
+      color: white;
+    }
+    
+    .bottom-gif {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 250px;
+      height: 200px;
+      z-index: 100;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 800px) {
+      .home-content {
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .projects-list li {
+        margin: 12px 0;
+      }
+
+      .projects-list a {
+        font-size: 13px;
+      }
+
+      .bottom-gif {
+        width: 150px;
+        height: 120px;
+        bottom: 10px;
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .home-content {
+        margin-top: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      .projects-list li {
+        margin: 10px 0;
+      }
+
+      .projects-list a {
+        font-size: 12px;
+      }
+
+      .bottom-gif {
+        width: 120px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+Maja Bay
+  <header class="header">
+    <nav class="nav">
+      <ul>
+        <li><a href="about.html">▸ about</a></li>
+        <li><a href="contact.html">▸ contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="home-content">
+    <ul class="projects-list">
+      <li><a href="project2.html" class="glitch-link">▹ Data Graphology</a></li>
+      <li><a href="project3.html" class="glitch-link">▹ Eco-Gnomiis</a></li>
+      <li><a href="project1.html" class="glitch-link">▹ Green Green Grass of Home</a></li>
+      <li><a href="project4.html" class="glitch-link">▹ HEART (human embodyment and reflexive technology)</a></li>
+      <li><a href="project5.html" class="glitch-link">▹ www.Daycare</a></li>
+      <li><a href="project6.html" class="glitch-link">▹ Uncanny Neighbourhoods</a></li>
+      <li><a href="project7.html" class="glitch-link">▹ Hello User! listen to your files</a></li>
+      <li><a href="project8.html" class="glitch-link">▹ The 8th missing tapestry</a></li>
+      <li><a href="project9.html" class="glitch-link">▹ An Awkward Walk</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function createGlitchEffect() {
+      const links = document.querySelectorAll('.glitch-link');
+      
+      links.forEach(link => {
+        const originalText = link.textContent;
+        
+        setInterval(() => {
+          // Random chance to trigger glitch (30% chance every 3 seconds)
+          if (Math.random() < 0.3) {
+            // Create a thick glitch effect with multiple rapid glitches
+            let glitchCount = 0;
+            const maxGlitches = 3;
+            
+            const glitchInterval = setInterval(() => {
+              let glitchedText = originalText
+                .split('')
+                .map(char => {
+                  // 50% chance to replace a character with 0 or 1 (more intense)
+                  if (Math.random() < 0.5 && char !== ' ' && char !== '▹') {
+                    return Math.random() > 0.5 ? '0' : '1';
+                  }
+                  return char;
+                })
+                .join('');
+              
+              link.textContent = glitchedText;
+              glitchCount++;
+              
+              // Stop after multiple glitches
+              if (glitchCount >= maxGlitches) {
+                clearInterval(glitchInterval);
+                // Keep the glitched text visible longer
+                setTimeout(() => {
+                  link.textContent = originalText;
+                }, 1200);
+              }
+            }, 80); // Quick glitch flicker every 80ms
+          }
+        }, 3000);
+      });
+    }
+    
+    // Start glitch effect when page loads
+    document.addEventListener('DOMContentLoaded', createGlitchEffect);
+  </script>
+
+</body>
+</html>

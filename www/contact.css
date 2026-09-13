@@ -1,0 +1,100 @@
+/* inner-pages.css */
+
+/* Resetting margin for body */
+
+/* Styles for the header */
+.header {
+  background-color: white;
+  color: darkblue;
+  padding: 0;
+  border-bottom: 0px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  margin: 0px; /* Adjust the margin as needed */
+}
+	
+
+
+/* Styles for the left-aligned menu items */
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin-left: 20px; /* Adjust the left margin as needed for spacing */
+}
+
+.image-section {
+  display: flex;
+  align-items: left; /* Vertically center content */
+  margin-left: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill); /* Adjust column width as needed */
+  gap: 10px; /* Adjust the gap between grid items as needed */
+}
+
+.grid-item {
+  display: flex;
+  justify-content: left; /* Horizontally center content */
+  align-items: left; /* Vertically center content */
+  border: 0px solid #ccc; /* Optional: Add borders or styling to grid items */
+}
+
+.body-text {
+  padding-top:0px; /* Add padding to the top for spacing */
+  margin-left: 80px; /* Add left margin for spacing */
+  margin-right: 50px; /* Add right margin for spacing */
+  text-align:left;
+  text-align: justify;
+  flex: 1;
+  padding: 0px;
+	
+}
+
+.body-text h1 {
+  font-size: 16px;
+  color: darkblue;
+  text-align: left;
+	margin-right: 50px;
+}
+
+
+.body-text h2 {
+  font-size: 16px;
+  color: darkblue;
+  text-align: center;
+  font-weight: 400;
+	margin: 50px;
+}
+
+
+.video {	
+align-content: center
+}
+
+.left-img {	
+align-content: left
+}
+
+.nav li {
+  margin: 40;
+  margin-right: 40px; /* Adjust the right margin as needed for spacing */
+}
+
+.nav a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+/* Style for the "Home" button on the right */
+.home-button {
+  margin-right: 30px; /* Adjust the right margin as needed for spacing */
+  text-decoration: none;
+  color: dark blue; /* Set the text color */
+}

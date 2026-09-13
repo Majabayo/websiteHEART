@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titlepix {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.titlepix img {
+  max-width: 100%;
+  height: auto;
+}
+
+.audio-section {
+  width: 25%;
+  margin-left: 10px;
+}
+
+.body-text {
+  width: 25%;
+  margin-left: 10px;
+}
+
+.image-section {
+  display: flex;
+}
+
+.image-section img {
+  max-height: 100%;
+  width: auto;
+}
